@@ -1,5 +1,5 @@
 import { IMovie } from '../../types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface Props {
   movie: IMovie,
@@ -7,7 +7,11 @@ interface Props {
   deleteMovie: (movieId: string) => void,
 }
 
-const MovieItem:React.FC<Props> = ({movie, onChangeMovie, deleteMovie}) => {
+const MovieItem:React.FC<Props> = React.memo(({movie, onChangeMovie, deleteMovie}) => {
+
+  useEffect(() => {
+
+  }, [movie]);
 
   return movie && (
     <div
@@ -29,6 +33,8 @@ const MovieItem:React.FC<Props> = ({movie, onChangeMovie, deleteMovie}) => {
       </button>
     </div>
   );
-};
+}, (prevProps, nextProps) => {
+  return prevProps.movie === nextProps.movie
+});
 
 export default MovieItem;
