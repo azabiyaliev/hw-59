@@ -27,6 +27,7 @@ const AddForm:React.FC<IProps> = ({addMovies}) => {
     e.preventDefault();
     addMovies({
       ...movies,
+      id: String(new Date())
     });
   };
 
