@@ -1,13 +1,13 @@
-import MovieTask from './containers/MovieTask/MovieTask.tsx';
+// import MovieTask from './containers/MovieTask/MovieTask.tsx';
+import JokesTask from './containers/JokesTask/JokesTask.tsx';
 
 const App = () => {
 
   return (
     <>
-      <div>
-        <div className="container">
-          <MovieTask/>
-        </div>
+      <div className="container">
+        {/*<MovieTask/>*/}
+        <JokesTask/>
       </div>
     </>
   )

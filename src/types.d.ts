@@ -4,3 +4,6 @@ export interface IMovie {
   name: string;
 }
 
+export interface IJoke  {
+  value:string
+}

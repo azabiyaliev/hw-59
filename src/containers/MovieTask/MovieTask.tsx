@@ -31,7 +31,8 @@ const MovieTask = () => {
   return (
     <div>
       <AddForm addMovies={addNewMovie}/>
-      <Movies movies={newMovies} onChangeMovieName={changeMovie} onDeleteMovie={deleteMovie}/>
+      {newMovies.length === 0 ? <h5 className='text-center text-primary mt-5'>Movies list empty</h5>:
+      <Movies movies={newMovies} onChangeMovieName={changeMovie} onDeleteMovie={deleteMovie}/>}
     </div>
   );
 };

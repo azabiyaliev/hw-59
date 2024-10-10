@@ -10,7 +10,6 @@ interface Props {
 const MovieItem:React.FC<Props> = React.memo(({movie, onChangeMovie, deleteMovie}) => {
 
   useEffect(() => {
-
   }, [movie]);
 
   return movie && (
