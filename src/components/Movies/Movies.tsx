@@ -5,12 +5,10 @@ import React from 'react';
 interface Props {
   movies: IMovie[];
   onChangeMovieName: (e:React.ChangeEvent<HTMLInputElement>, movieId: string) => void,
-  onDeleteMovie: React.MouseEventHandler<HTMLButtonElement>
+  onDeleteMovie: (id: string) => void,
 }
 
 const Movies: React.FC<Props> = ({movies, onChangeMovieName, onDeleteMovie}) => {
-
-
 
   return (
     <>
